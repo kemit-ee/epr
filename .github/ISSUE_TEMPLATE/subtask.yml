@@ -1,0 +1,42 @@
+name: Sub-task
+description: Konkreetne samm — UI-voog, integratsioon, reeglimootor, test.
+title: "[Sub] "
+labels: []
+body:
+  - type: textarea
+    id: taust
+    attributes:
+      label: Taust ja seosed
+      description: Parent Task + viited (vajadusel) BN/KJ/AR-dele.
+      value: |
+        Parent Task: #
+        KJ:
+        AR:
+    validations:
+      required: true
+
+  - type: textarea
+    id: eesmark
+    attributes:
+      label: Mida tahame saavutada
+    validations:
+      required: true
+
+  - type: textarea
+    id: kriteeriumid
+    attributes:
+      label: Vastuvõtukriteeriumid
+      placeholder: |
+        - [ ] Kriteerium 1
+    validations:
+      required: true
+
+  - type: textarea
+    id: testid
+    attributes:
+      label: Vastuvõtutestid
+
+  - type: textarea
+    id: riskid
+    attributes:
+      label: Riskid ja sõltuvused

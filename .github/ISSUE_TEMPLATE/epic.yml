@@ -1,0 +1,69 @@
+name: Epic
+description: Äriline tulemus, mis koondab mitu kasutusjuhtu ja task'i.
+title: "[Epic] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Palun täida kõik sektsioonid. ID-põhiseid seoseid (BN/KJ/AR) hallatakse ka Projecti fieldides.
+
+  - type: textarea
+    id: taust
+    attributes:
+      label: Taust ja seosed
+      description: Viited ärinõuetele (BN), kasutusjuhtudele (KJ), ärireeglitele (AR) ning õigusaktidele.
+      placeholder: |
+        BN: BN-002, BN-003, BN-004
+        KJ: KJ-001, KJ-002
+        AR: AR-001, AR-002, AR-003
+        Allikas: ELVR art 18, art 19, Annex VIII
+      value: |
+        BN:
+        KJ:
+        AR:
+        Allikas:
+    validations:
+      required: true
+
+  - type: textarea
+    id: eesmark
+    attributes:
+      label: Mida tahame saavutada
+      description: Üks või kaks lauset — mis äripoolt lugedes muutub võrreldes praegusega.
+    validations:
+      required: true
+
+  - type: textarea
+    id: kriteeriumid
+    attributes:
+      label: Vastuvõtukriteeriumid
+      description: Loetelu, mis peab olema täidetud, et Epic lugeda valmis.
+      placeholder: |
+        - [ ] Kriteerium 1
+        - [ ] Kriteerium 2
+    validations:
+      required: true
+
+  - type: textarea
+    id: testid
+    attributes:
+      label: Vastuvõtutestid
+      description: Konkreetsed testid või demod, millega tõendame, et vastuvõtukriteeriumid täidetud.
+      placeholder: |
+        - [ ] Test 1
+        - [ ] Test 2
+
+  - type: textarea
+    id: riskid
+    attributes:
+      label: Riskid ja sõltuvused
+      description: Teadaolevad riskid, välissõltuvused, teistest Epicutest sõltuvused.
+
+  - type: textarea
+    id: kusimused
+    attributes:
+      label: Avatud küsimused äripoolele
+      description: Küsimused, mis vajavad ärioma­niku vastust enne, kui saame edasi minna.
+      placeholder: |
+        - [ ] Küsimus 1

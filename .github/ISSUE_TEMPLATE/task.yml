@@ -1,0 +1,60 @@
+name: Task
+description: Üks selgelt piiritletud tööosa (üks KJ või tihedalt seotud paar).
+title: "[Task] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Task elab Epicu all. Täpsed sammud lähevad sub-task'idesse (sub-issue hierarhia).
+
+  - type: textarea
+    id: taust
+    attributes:
+      label: Taust ja seosed
+      description: Viited BN/KJ/AR ja õigusaktidele; parent Epic.
+      value: |
+        Parent Epic: #
+        BN:
+        KJ:
+        AR:
+        Allikas:
+    validations:
+      required: true
+
+  - type: textarea
+    id: eesmark
+    attributes:
+      label: Mida tahame saavutada
+      description: Üks või kaks lauset selle Taski kohta.
+    validations:
+      required: true
+
+  - type: textarea
+    id: kriteeriumid
+    attributes:
+      label: Vastuvõtukriteeriumid
+      placeholder: |
+        - [ ] Kriteerium 1
+        - [ ] Kriteerium 2
+    validations:
+      required: true
+
+  - type: textarea
+    id: testid
+    attributes:
+      label: Vastuvõtutestid
+      placeholder: |
+        - [ ] Test 1
+
+  - type: textarea
+    id: riskid
+    attributes:
+      label: Riskid ja sõltuvused
+
+  - type: textarea
+    id: kusimused
+    attributes:
+      label: Avatud küsimused äripoolele
+      placeholder: |
+        - [ ] Küsimus 1
